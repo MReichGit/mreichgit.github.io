@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <div class="logo">
+                <img src="images/Logo.png" width="10%">
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Über mich</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Projekte</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="information">
+            <div class="overlay"></div>
+            <img src="images/martin-cool.png" class="martin">
+            <div id="circle">
+                <div class="feature one">
+                    <img src="images/flask-icon.png">
+                    <div>
+                        <h1>Wissenschaft</h1>
+                        <p>Projekte zum Nachmachen</p>
+                    </div>
+                </div>
+                <div class="feature two">
+                    <img src="images/watering-icon.png">
+                    <div>
+                        <h1>Blog</h1>
+                        <p>Wichtige News</p>
+                    </div>
+                </div>
+                <div class="feature three">
+                    <img src="images/harvesting-icon.png">
+                    <div>
+                        <h1>Ökologie</h1>
+                        <p>Pflanzen und so</p>
+                    </div>
+                </div>
+                <div class="feature four">
+                    <img src="images/ayurveda-bowl-icon.png">
+                    <div>
+                        <h1>Kochen und Essen</h1>
+                        <p>Lecker und Insekten</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class ="controls">
+            <img src ="images/arrow-thin-chevron-bottom-icon.png" id="arrowup">
+            <h3>Inhalte</h3>
+            <img src = "images/arrow-thin-chevron-bottom-icon.png" id="arrowdown">
+        </div>
+    </div>  
+    <script>
+        var circle = document.getElementById("circle");
+        var upBtn = document.getElementById("arrowup");
+        var downBtn = document.getElementById("arrowdown");
+    
+        var rotateValue = circle.style.transform;
+        var rotateSum;
+
+        upBtn.onclick = function(){
+            rotateSum = rotateValue + "rotate(-90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+        downBtn.onclick = function(){
+            rotateSum = rotateValue + "rotate(90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+    </script>  
+</body>
+</html>
